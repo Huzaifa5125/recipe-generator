@@ -1,7 +1,7 @@
 // src/lib/api.ts
 import { RecipeRequest, RecipeResponse } from '@/types/recipe';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'EmTpro01/reciper-generation';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://huggingface.co/spaces/EmTpro01/reciper-generation';
 
 export async function generateRecipe(ingredients: string[]): Promise<RecipeResponse> {
   const response = await fetch(`${API_URL}/generate-recipe`, {
